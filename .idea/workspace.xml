@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cf08239-5fc2-4be6-9df2-0b6936eafc5d" name="Default" comment="" />
+    <list default="true" id="7cf08239-5fc2-4be6-9df2-0b6936eafc5d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BreakRoomInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BreakRoomInvoice.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +18,8 @@
       <file leaf-file-name="BreakRoomInvoice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BreakRoomInvoice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="499">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,6 +35,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,6 +57,7 @@
     <option name="width" value="1680" />
     <option name="height" value="1023" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -182,7 +189,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32937366" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -243,8 +250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BreakRoomInvoice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="499">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

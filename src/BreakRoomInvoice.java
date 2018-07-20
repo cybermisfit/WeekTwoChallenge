@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.lang.String;
+
 
 public class BreakRoomInvoice {
 
@@ -44,7 +44,7 @@ public class BreakRoomInvoice {
 
                 Scanner sc = new Scanner(System.in);
 
-     //The tax code will be randomly selected from 0-3. Need to fix the structure of this
+     //The tax code will be randomly selected from 0-3. Need to fix the structure of this  i.e. "double" inside string
                 switch (stateTax) {
                     case 1:
                     taxRate = "6.00";
@@ -91,9 +91,8 @@ public class BreakRoomInvoice {
 
                         }
                     }
-//                    Yet to complete: building out the "quit" break in the loop with and if statement. Calculate the
-//                    subtotal, purchase total, etc. Format the decimals.
-//                    Generate the output from the inputted data.
+//    Yet to complete: building out the "quit" break in the loop with and if statement. Calculate the subtotal,
+//    purchase total, etc. Format the decimals. Generate the output from the inputted data. And on and on.
 
 
                 }
