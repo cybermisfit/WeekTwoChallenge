@@ -91,8 +91,9 @@ public class BreakRoomInvoice {
 
                         }
                     }
-//                    Yet to complete: building out the "quit" break in the loop with and if statement. Format the decimals.
-//                    Generate the output from the inputed data.
+//                    Yet to complete: building out the "quit" break in the loop with and if statement. Calculate the
+//                    subtotal, purchase total, etc. Format the decimals.
+//                    Generate the output from the inputted data.
 
 
                 }
