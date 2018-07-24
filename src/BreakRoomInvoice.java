@@ -26,76 +26,95 @@ public class BreakRoomInvoice {
 //
 //        You should have at least one additional method besides the main! (I don't want to see "System.out.print()" or "System.out.println()"
 
+        //VARIABLES & SCANNER
 
-                boolean stop = false;
-                boolean taxQuestion;
+        double taxRate = 0.00;
+        int stateTax = 0;
 
-                String itemName;
-                String taxRate;
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
 
-                double itemPrice;
-                double salesTax;
-                double subTotal;
-                double purchaseTotal;
+        int taxCode = rand.nextInt(4);
 
+        if (taxCode == 1) {
+            taxRate = 0.06;
+        } else if (taxCode == 2) {
+            taxRate = 0.053;
+        } else if (taxCode == 3) {
+            taxRate = 0.0575;
+        } else {
+            taxRate = 0.05;
+        }
 
-                int itemQuantity;
-                int stateTax = 0;
-
-                Scanner sc = new Scanner(System.in);
-
-     //The tax code will be randomly selected from 0-3. Need to fix the structure of this  i.e. "double" inside string
-                switch (stateTax) {
-                    case 1:
-                    taxRate = "6.00";
-                    break;
-
-                    case 2:
-                    taxRate = "5.30";
-                    break;
-
-                    case 3:
-                    taxRate = "5.75";
-                    break;
-
-                    default:
-                    taxRate = "5.0";
-                    break;
-                }
-
-        Random randNum = new Random();
-        stateTax = 1 + randNum.nextInt(2);
+        String result = "";
+        String userInput="";
+        double subTotal = 0.0;
+        double taxableTotal = 0.0;
 
 
 
-        System.out.println("Welcome to the Behind-The-Door Break Room Cafe!");
-        //Implement a loop functionality that allows users to enter in as many item as they want until the user enters in "quit" (do NOT hard code the items)
+        //USER INPUT
 
-                while (stop==false) {
-                    System.out.println("Enter a food item you want: ");
-                    itemName = sc.next();
+        while (!userInput.equalsIgnoreCase("quit")) {
+            printout("Enter a food item you want: ");
+            String itemName = sc.next();
 
-                    System.out.println("Price: ");
-                    itemPrice = sc.nextDouble();
+            printout("Price: ");
+            double itemPrice = sc.nextDouble();
 
-                    System.out.println("Taxable (true or false): ");
-                    taxQuestion = sc.nextBoolean();
+            printout("Taxable? True or False: ");
+            boolean taxable = sc.nextBoolean();
 
-                    System.out.println("Quantity: ");
-                    itemQuantity = sc.nextInt();
+            printout("Quantity: ");
+            int itemQuantity = sc.nextInt();
 
-                    System.out.println("Do you want to add another item? (Type 'quit' to exit)");
+            String formatPrice = String.format("%.02f", itemPrice);
+
+            result += itemName + "\t\t\t" + itemQuantity + "\t\t\t\t$" + formatPrice + "\t\t" + taxable + "\n";
+
+            //INSIDE WHILE LOOP FOR STRING BUILDER
+            subTotal += (itemPrice * itemQuantity);
+
+            if (taxable == true) {
+                taxableTotal += (itemPrice * itemQuantity);
+            }
+
+            printout("Do you want to add another item? (Type 'quit' to exit): ");
+            userInput = sc.next();
+
+        }
+
+        //FORMATTING and CALCULATIONS
+
+        double salesTax = taxableTotal * taxRate;
+        double totalAmount = salesTax + subTotal;
+
+        String formatSubTotal = String.format("%.02f", subTotal);
+        String formatSalesTax = String.format("%.02f", salesTax);
+        String formatTotalAmount = String.format("%.02f", totalAmount);
+        String formatTaxRate = String.format("%.02f", taxRate);
+        //String formatPrice = String.format("%.02f", itemPrice);
+
+
+        //OUTPUT DISPLAYED
+        printout("\n");
+        printout("Item Name" + "\t\t" + "Quantity" + "\t\t" + "Price" + "\t\t" + "Taxable");
+        printout(result);
+        printout("Sub-Total = $" + formatSubTotal);
+        printout("Tax Rate = " + formatTaxRate + " (Tax code = " + taxCode + ")");
+        printout("Sales Tax = $" + formatSalesTax);
+        printout("__________________________________________________________");
+        printout("Total = $" + formatTotalAmount);
 
 
 
+    }
 
-                        }
-                    }
-//    Yet to complete: building out the "quit" break in the loop with and if statement. Calculate the subtotal,
-//    purchase total, etc. Format the decimals. Generate the output from the inputted data. And on and on.
-
-
-                }
+    //ADDITIONAL METHOD FOR PRINTING
+            public static void printout(String printout){
+                System.out.println(printout);
+    }
+}
 
 
 
